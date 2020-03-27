@@ -1,0 +1,12 @@
+<ul>
+  <li><a routerLink="/">На главную</a></li>
+  <li><a routerLink="/tasks">Список задач</a></li>
+</ul>
+
+<ul>
+ <li *ngFor="let task of tasks">
+   <h6>{{task.title}}</h6>
+    <span>{{task.hour}}:{{task.minutes}} </span>
+    <a [routerLink]='"/tasks/" + task.id'>Далее</a>
+  </li>
+</ul>
